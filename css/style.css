@@ -1,0 +1,263 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "WeirdWords";
+  src: url("../fonts/WeirdWordsDemo-z8eOD.otf");
+}
+@font-face {
+  font-family: "LeftHanded";
+  src: url("../fonts/LeftHandedWritingLooksWeird-lVqV.ttf");
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  background-color: #9e70ac;
+  color: #dc143c;
+  font-family: WeirdWords;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+._container {
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 50px 20px;
+}
+
+.parallax {
+  min-height: 100vh;
+}
+
+.parallax__body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.parallax__container {
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.parallax__label {
+  color: #dc143c;
+  display: flex;
+  font-size: 18px;
+  letter-spacing: 6px;
+  margin: 0 0 30px 0;
+  align-items: center;
+}
+
+.parallax__title {
+  font-size: 88px;
+}
+
+.parallax__images {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  z-index: 1;
+}
+
+.images-parallax__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.images-parallax__bg,
+.images-parallax__eyes,
+.images-parallax__glass {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.images-parallax__bg {
+  background: url(../img/bg/3.jpg) top/contain no-repeat;
+  top: 0;
+  width: 120%;
+  left: -10%;
+}
+
+.images-parallax__eyes {
+  background: url(../img/bg/2.png) top/contain no-repeat;
+  top: 0%;
+  z-index: 2;
+}
+
+.images-parallax__glass {
+  background: url(../img/bg/1.png) top/contain no-repeat;
+  background-size: 80%;
+  width: 120%;
+  height: 200%;
+  left: -10%;
+  z-index: 3;
+}
+
+@media (min-width: 2100px) {
+  .images-parallax__glass {
+    top: -32%;
+  }
+}
+@media (min-width: 1900px) {
+  .images-parallax__glass {
+    top: -12%;
+  }
+}
+@media (max-width: 767px) {
+  .parallax__title {
+    font-size: 16px;
+  }
+  .parallax__label {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+  }
+  .images-parallax__glass {
+    top: 0%;
+  }
+}
+@media (max-width: 479px) {
+  .parallax__title {
+    font-size: 36px;
+  }
+  .parallax__label::before {
+    flex: 0 0 50px;
+    margin: 0 10px 0 0;
+  }
+}
+.content {
+  background-color: #9e70ac;
+  position: relative;
+  z-index: 2;
+}
+
+.content::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 296px;
+  transform: translate(0px, -100%);
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 5%, #9e70ac 100%);
+}
+
+.content__title {
+  font-size: 35px;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.content__text {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+.content__text p {
+  margin: 0 0 30px 0;
+  text-align: center;
+  font-family: LeftHanded;
+}
+.content__text .big-num {
+  text-align: center;
+  font-family: WeirdWords;
+}
