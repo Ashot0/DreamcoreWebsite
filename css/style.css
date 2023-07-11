@@ -197,7 +197,7 @@ body {
     top: -32%;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1536px) {
   .images-parallax__glass {
     top: -12%;
   }
